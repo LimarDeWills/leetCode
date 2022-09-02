@@ -1,5 +1,7 @@
-#include <iostream>
 #include <vector>
+
+#include "DurationTime.h"
+
 //the pivot index
 
 //test cases:
@@ -11,6 +13,7 @@
 
 int pivotIndex(std::vector<int>& nums)
 {
+    DurationTime dt(__func__);
     int sum = 0;
     int leftSum = 0;
     for (auto& el : nums)
@@ -23,7 +26,6 @@ int pivotIndex(std::vector<int>& nums)
 
         leftSum += nums[i];
     }
-
 
     return -1;
 }
